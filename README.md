@@ -1,2 +1,2 @@
-# scrapy-spider
-scrapy-spider（learning）
+# Django student-manage
+Django学生管理系统
