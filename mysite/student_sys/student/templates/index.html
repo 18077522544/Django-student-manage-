@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>学生管理系统</title>
+</head>
+	<body>
+		<h3><a href="/admin/">Admin</a></h3>
+		<ul>
+		{% for student in students %}
+			<li>{{ student.name }} - {{ student.get_status_display }}</li>
+		{% endfor %}
+		</ul>
+		<hr/>
+		<form action="/" method="POST">
+			{% csrf_token %}
+			{{ form }}
+			<input type="submit" value="Submit" />
+		</form>
+	</body>
+</html>
